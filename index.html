@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+ <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<title>Psychic-Game</title>
+</head>
+
+<body>
+	<p>Guess what letter I'm thinking of
+		<!--each one of these lines gets a p tag-->
+	   Wins"(# of times the user has guessed the letter correctly)
+
+	   Losses" (# of times the user has failed to guess the letter correctly after exhausting all guesses)
+
+	   Guesses Left: (# of guesses left. This will update)
+
+	   Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
+
+	   When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
+
+	   When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins). </p>
+<!--the text that the player sees-->
+	<h1>Week 3 Game</h1>
+<p>guess what I'm thinking</p>
+<p>wins: </p>
+<p>losses: </p>
+<p>guess left: </p>
+<!--note the guessedLtrs in javascript below-->
+<p id="guessedLtrs">guesses so far: </p>
+ 
+
+     <!--setting up the page for javascript-->
+<script type="text/javascript">
+//translating all the text from above into javascript lingo
+	var psychicLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+	var guessesLeft = 9;
+	var numWins = 0;
+	var numLosses = 0;
+	var guessedLetters = [];//array to capture user letter input
+
+								//js wrapped in squiggly bracket
+	document.onkeyup = function(event) {
+		var userkey = event.key.toLowerCase();
+		guessedLetters = guessedLetters + userkey+", ";
+		console.log(guessedLetters); //log the guessed letters 
+		document.getElementById("guessedLtrs").innerHTML = "guesses so far: " + guessedLetters;
+		var psychicAns = psychicLetters[Math.floor(Math.random() * psychicLetters.length)]; //generates random answer
+		if (yourGuess === psychicAns) {
+			youWin++
+			guessesLeft = 8;
+		}
+		 
+		
+		guessesLeft--;
+		//If the guesses remaining equals 0, you lose, an increment is added to the "Losses" tally and the points restart
+		if (guessesLeft===0) {
+			//alert box pops up
+			alert('you are out of guesses');
+		}	//thinking I don't need this; redundant
+		else(youLose){
+			alert('you lose')
+		}
+
+		for (i = 0; i <= 8; i++){
+			console.log( [i]);
+		}                              //for loop
+	
+	 }
+
+	// for (i = 0; i <= 8; i++) { 
+
+
+	// }
+
+</script>
+
+
+
+ 
+	
+</body>
+</html>
