@@ -54,7 +54,7 @@
 		console.log('the answer is '+psychicAns);//console log the answer
 	}
 
-	// the function below gets called when a hey is pressed and released							 
+	// the function below gets called when a key is pressed and released							 
 	document.onkeyup = function(event) {
 		 
 		
@@ -62,24 +62,23 @@
 		//reduce number of guesses by 1
 		document.getElementById("guessesLeft").innerHTML = "guessesLeft:" +guessesLeft; //update number of guesses on page
 
-		userkey = event.key.toLowercase(); //convert key that was pressed to lower case and save to variable userkey
-			guessedLetters.push(userkey); // add userkey to guessedLetters array
+		userkey = event.key.toLowerCase(); //convert key that was pressed to lower case and save to variable userkey
+			guessedLtrs.push(userkey); // add userkey to guessedLetters array
 			document.getElementById("guessedLtrs").innerHTML = "guesses so far: " + guessedLetters; //update guessed letters on page
 
 
 			if (userkey === psychicAns) {
 				alert('You Win');
-			var numWins++;  //adds one to Numwins
-				document.write("numWins"); //update page to show number of wins
-
+			    document.getElementById("numWins").innerHTML = "wins:" + numWins:  //adds one to Numwins (don't need var here)
+				 
 				gameReset(); // call function to reset the game
 
 			}
 
 			if (guessesLeft===0){
 				alert('you are out of guesses. try again')
-			var numLosses--; //add one to numLoses variable
-			 	document.write("numLosses"); //update page to show number of losses	
+			    document.getElementById("numLosses").innerHTML = "losses:" + numLosses: //add one to numLoses variable (use plus sign even though its subtraction)
+			 	//update page to show number of losses	
 
 			 	gameReset(); //call function to reset the game
 
