@@ -49,7 +49,7 @@
 		guessesLeft = 9;
 		guessedLetters = [];
 		document.getElementById("guessesLeft").innerHTML = "guesses left: 9";
-		document.getElementById("guessedLetters").innerHTML = "guesses so far: ";
+		document.getElementById("guessedLtrs").innerHTMLr = "guesses so far: ";
 		psychicAns = psychicLetters[Math.floor(Math.random() * psychicLetters.length)]; // generates random answer
 		console.log('the answer is '+psychicAns);//console log the answer
 	}
@@ -64,7 +64,7 @@
 
 		userkey = event.key.toLowerCase(); //convert key that was pressed to lower case and save to variable userkey
 			guessedLtrs.push(userkey); // add userkey to guessedLetters array
-			document.getElementById("guessedLtrs").innerHTML = "guesses so far: " + guessedLetters; //update guessed letters on page
+			document.getElementById("guessedLtrs").innerHTML = "guesses so far;" + guessedLetters; //update guessed letters on page
 
 
 			if (userkey === psychicAns) {
