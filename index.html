@@ -63,21 +63,24 @@
 		document.getElementById("guessesLeft").innerHTML = "guessesLeft:" +guessesLeft; //update number of guesses on page
 
 		userkey = event.key.toLowerCase(); //convert key that was pressed to lower case and save to variable userkey
-			guessedLtrs.push(userkey); // add userkey to guessedLetters array
+			guessedLetters.push(userkey)    
+			 
 			document.getElementById("guessedLtrs").innerHTML = "guesses so far;" + guessedLetters; //update guessed letters on page
 
 
-			if (userkey === psychicAns) {
+			if (userkey === psychicAns) { 
+				numWins++;
 				alert('You Win');
-			    document.getElementById("numWins").innerHTML = "wins:" + numWins:  //adds one to Numwins (don't need var here)
+			    document.getElementById("numWins").innerHTML = "wins:" + numWins;
 				 
 				gameReset(); // call function to reset the game
 
 			}
 
 			if (guessesLeft===0){
+				numLosses++;
 				alert('you are out of guesses. try again')
-			    document.getElementById("numLosses").innerHTML = "losses:" + numLosses: //add one to numLoses variable (use plus sign even though its subtraction)
+			    document.getElementById("numLosses").innerHTML = "losses:"+ numLosses;
 			 	//update page to show number of losses	
 
 			 	gameReset(); //call function to reset the game
