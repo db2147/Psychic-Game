@@ -1,3 +1,15 @@
 body{
-    background-color: bisque;
+    background-color: #D633FF;
+    text-align: center;
+    margin-top: 148px;
+}
+
+.title{
+    font-size: 150px;
+    font-family: "Keep on Truckin'FW Regular";
+    color:#00f9ff;
+}
+
+.text{
+    font-size: 55px;
 }
