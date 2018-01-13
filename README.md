@@ -7,7 +7,7 @@ In the HTML page I created in line javascript, which is simply javascript incorp
 <br>
 <br>
 <img src="assets/images\Capture.PNG" alt="Drawing" style="width: 550px; float: left;" />
-
-
+<br>
+Good Luck!
 
  
